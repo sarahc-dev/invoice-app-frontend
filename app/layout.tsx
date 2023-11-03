@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
+import { Providers } from "./providers";
+import Header from "@/components/layout/Header";
 import "./globals.css";
 
 const spartan = League_Spartan({ subsets: ["latin"] });
@@ -15,8 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${spartan.className} min-h-screen`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={spartan.className}>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
