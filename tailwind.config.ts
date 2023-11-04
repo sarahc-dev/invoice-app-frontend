@@ -11,6 +11,7 @@ const config: Config = {
     colors: {
       white: "#ffffff",
       light: "#f8f8f8",
+      dark: "#0C0E16",
       blue: {
         100: "#7c5dfa",
         200: "#9277ff",
@@ -19,15 +20,29 @@ const config: Config = {
         500: "#dfe3fa",
         600: "#888eb0",
         700: "#7e88c3",
-        800: "#0c0e16",
+        800: "#373b53",
         900: "#141625",
       },
       red: {
-        200: "#ec5757",
-        300: "#9277ff",
+        300: "#ec5757",
+        400: "#9277ff",
+      },
+      green: {
+        400: "#33d69f",
+      },
+      orange: {
+        400: "#ff8f00",
       },
     },
-    extend: {},
+    extend: {
+      borderRadius: {
+        "2xl": "20px",
+      },
+      spacing: {
+        18: "4.5rem",
+        25: "6.4375rem",
+      },
+    },
   },
   plugins: [],
 };

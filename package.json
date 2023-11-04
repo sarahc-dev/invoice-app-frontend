@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:cypress": "cypress open",
-    "test:jest": "jest --watchAll"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --component",
+    "jest": "jest --watchAll"
   },
   "dependencies": {
     "next": "14.0.1",

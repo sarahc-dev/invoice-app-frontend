@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={spartan.className}>
+      <body className={`${spartan.className} flex flex-1 flex-col xl:flex-row`}>
         <Providers>
           <Header />
           {children}

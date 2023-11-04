@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-light min-h-screen dark:bg-blue-900;
+    @apply bg-light dark:text-light text-dark min-h-screen dark:bg-blue-900;
   }
 }
