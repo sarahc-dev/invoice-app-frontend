@@ -25,7 +25,7 @@ const config: Config = {
       },
       red: {
         300: "#ec5757",
-        400: "#9277ff",
+        400: "#ff9797",
       },
       green: {
         400: "#33d69f",
@@ -33,6 +33,20 @@ const config: Config = {
       orange: {
         400: "#ff8f00",
       },
+    },
+    fontSize: {
+      sm: ["0.8125rem", "0.9375rem"],
+      base: ["0.8125rem", "1.125rem"],
+      md: ["0.9375rem", "0.9375rem"],
+      lg: ["0.9375rem", "1.5rem"],
+      xl: "1.5rem",
+      "2xl": "2.25rem",
+    },
+    letterSpacing: {
+      tightest: "-1.13px",
+      tighter: "-0.75px",
+      tight: "-0.25px",
+      normal: "-0.1px",
     },
     extend: {
       borderRadius: {

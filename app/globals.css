@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  .heading-lg {
+    @apply tracking-tightest text-2xl font-bold leading-none;
+  }
+
+  .heading-md {
+    @apply text-xl font-bold leading-none tracking-tighter;
+  }
+
+  .heading-sm {
+    @apply text-lg font-bold tracking-tight;
+  }
+
+  .heading-sm-var {
+    @apply text-md font-bold tracking-tight;
+  }
+
+  .text-body {
+    @apply text-base tracking-normal;
+  }
+
+  .text-body-var {
+    @apply font-sm tracking-tight;
+  }
+
   body {
-    @apply bg-light dark:text-light text-dark min-h-screen dark:bg-blue-900;
+    @apply bg-light dark:text-light text-dark text-body min-h-screen dark:bg-blue-900;
   }
 }
