@@ -12,10 +12,7 @@ describe("toggle dark mode", () => {
     });
     cy.get("[data-cy='themeToggle']").click();
     cy.get("html").should("have.class", "dark");
-    cy.get("[data-cy='themeToggle'] img").should(($img) => {
-      const src = $img.attr("src");
-      expect(src).to.include("icon-sun");
-    });
+    cy.get("[data-cy='sunIcon']").should("exist");
     cy.get("[data-cy='themeToggle']").should(
       "have.attr",
       "aria-label",
@@ -33,10 +30,7 @@ describe("toggle dark mode", () => {
     cy.get("html").should("have.class", "dark");
     cy.get("[data-cy='themeToggle']").click();
     cy.get("html").should("have.class", "light");
-    cy.get("[data-cy='themeToggle'] img").should(($img) => {
-      const src = $img.attr("src");
-      expect(src).to.include("icon-moon");
-    });
+    cy.get("[data-cy='moonIcon']").should("exist");
     cy.get("[data-cy='themeToggle']").should(
       "have.attr",
       "aria-label",

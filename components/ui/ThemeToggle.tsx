@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Moon from "@/public/assets/icon-moon.svg";
 import Sun from "@/public/assets/icon-sun.svg";
+import MoonIcon from "../svg/MoonIcon";
+import SunIcon from "../svg/SunIcon";
 
 export default function ThemeToggle({
   theme,
@@ -44,12 +46,7 @@ export default function ThemeToggle({
       data-cy="themeToggle"
       type="button"
     >
-      <Image
-        src={theme === "light" ? Moon : Sun}
-        alt=""
-        height="20"
-        width="20"
-      />
+      {theme === "light" ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 }

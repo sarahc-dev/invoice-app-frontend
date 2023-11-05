@@ -3,10 +3,8 @@ import ThemeToggle from "./ThemeToggle";
 describe("<ToggleThemeButton />", () => {
   it("displays moon icon when theme is light", () => {
     cy.mount(<ThemeToggle theme="light" setTheme={cy.stub()} />);
-    cy.get("[data-cy='themeToggle'] img").should(($img) => {
-      const src = $img.attr("src");
-      expect(src).to.include("icon-moon");
-    });
+    cy.get("[data-cy='moonIcon']").should("exist");
+    cy.get("[data-cy='sunIcon']").should("not.exist");
     cy.get("[data-cy='themeToggle']").should(
       "have.attr",
       "aria-label",
@@ -16,10 +14,8 @@ describe("<ToggleThemeButton />", () => {
 
   it("displays sun icon when theme is dark", () => {
     cy.mount(<ThemeToggle theme="dark" setTheme={cy.stub()} />);
-    cy.get("[data-cy='themeToggle'] img").should(($img) => {
-      const src = $img.attr("src");
-      expect(src).to.include("icon-sun");
-    });
+    cy.get("[data-cy='sunIcon']").should("exist");
+    cy.get("[data-cy='moonIcon']").should("not.exist");
     cy.get("[data-cy='themeToggle']").should(
       "have.attr",
       "aria-label",
