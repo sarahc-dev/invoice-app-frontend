@@ -52,9 +52,13 @@ const config: Config = {
       borderRadius: {
         "2xl": "20px",
       },
+      maxWidth: {
+        base: "45.625rem", // 730px
+      },
       spacing: {
-        18: "4.5rem",
-        25: "6.4375rem",
+        15: "3.75rem", // 60px
+        18: "4.5rem", // 72px
+        25: "6.4375rem", // 103px
       },
     },
   },
