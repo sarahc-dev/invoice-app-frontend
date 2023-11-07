@@ -1,19 +1,12 @@
-name: E2E on Chrome
-
-on: [push]
-
+name: Component tests
+on: push
 jobs:
-  install:
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v4
       - name: Cypress run
-        uses: cypress-io/github-actions@v3
+        uses: cypress-io/github-action@v6
         with:
-          project: ./site
-          browser: chrome
-          build: npm run build
-          start: npm run start
-          wait-on: "http://localhost:3000"
+          component: true
