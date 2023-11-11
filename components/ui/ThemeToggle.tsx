@@ -1,9 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import Moon from "@/public/assets/icon-moon.svg";
-import Sun from "@/public/assets/icon-sun.svg";
 import MoonIcon from "../svg/MoonIcon";
 import SunIcon from "../svg/SunIcon";
 
@@ -20,16 +17,8 @@ export default function ThemeToggle({
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const checkLocalStorage = localStorage.getItem("theme");
-    if (!checkLocalStorage) {
-      const checkDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      setTheme(checkDarkTheme ? "dark" : "light");
-    }
-  }, [setTheme]);
-
   const toggleTheme = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   if (!mounted) {

@@ -4,10 +4,11 @@ import { useTheme } from "next-themes";
 import ThemeToggle from "./ThemeToggle";
 
 export default function ThemeToggleWrapper() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
+
   return (
     <>
-      <ThemeToggle theme={theme} setTheme={setTheme} />
+      <ThemeToggle theme={resolvedTheme} setTheme={setTheme} />
     </>
   );
 }
