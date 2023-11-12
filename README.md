@@ -4,9 +4,7 @@ This is the frontend for the invoice app.
 
 ## CI/CD
 
-I am trying to learn more about CI/CD. I have added a github action that runs my Cypress component tests on push to main.
-
-I am using Vercel and by default pushing to main updates the production branch. You can create a Preview deployment by committing changes to another branch, without merging these changes to the production branch.
+I am trying to learn more about CI/CD so I have created some GitHub Actions to run my component and e2e tests on every push to GitHub and on pull requests to main. I have also set up Cypress Cloud to get to know this software. I am using Vercel and by default pushing to main updates the production branch. I have mocked up a more realistic workflow by adding a Branch protection rule on main so this can only be updated via pull request and I will work from a branch. Vercel creates a separate preview deployment when you commit changes to a branch other than main, so this will act as a 'staging' environment and I can see that my project is building and working correctly at each commit.
 
 ## Issues
 
