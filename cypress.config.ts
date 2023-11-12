@@ -2,6 +2,7 @@ import { defineConfig } from "cypress";
 import path from "path";
 
 export default defineConfig({
+  projectId: "t74rpn",
   component: {
     devServer: {
       framework: "next",
