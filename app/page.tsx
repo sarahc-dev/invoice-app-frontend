@@ -1,11 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InvoiceCountStatus from "@/components/invoice/InvoiceCountStatus";
 import NewButton from "@/components/ui/NewButton";
 import InvoiceContainer from "@/components/invoice/InvoiceContainer";
 
 export default function Home() {
   const [invoices, setInvoices] = useState([]);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setInvoices(data));
+  }, []);
+
   return (
     <main className="flex w-full flex-1 flex-col px-6 py-8 md:px-12 md:py-15 xl:py-20">
       <div className="mx-auto flex w-full max-w-base">
