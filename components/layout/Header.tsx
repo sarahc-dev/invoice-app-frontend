@@ -5,8 +5,8 @@ import ThemeToggleWrapper from "../ui/ThemeToggleWrapper";
 
 export default function Header() {
   return (
-    <header className="h-18 xl:w-25 flex justify-between bg-blue-800 md:h-20 xl:h-auto xl:flex-col xl:rounded-r-2xl">
-      <div className="w-18 after:w-18 xl:w-25 xl:h-25 xl:after:w-25 relative flex items-center justify-center rounded-r-2xl bg-blue-100 after:absolute after:bottom-0 after:h-9 after:rounded-br-2xl after:rounded-tl-2xl after:bg-blue-200 md:w-20 md:after:h-10 md:after:w-20 xl:after:h-[3.2187rem]">
+    <header className="xl:w-26 flex h-18 justify-between bg-blue-800 md:h-20 xl:h-auto xl:flex-col xl:rounded-r-2xl">
+      <div className="xl:w-26 xl:h-26 xl:after:w-26 relative flex w-18 items-center justify-center rounded-r-2xl bg-blue-100 after:absolute after:bottom-0 after:h-9 after:w-18 after:rounded-br-2xl after:rounded-tl-2xl after:bg-blue-200 md:w-20 md:after:h-10 md:after:w-20 xl:after:h-[3.2187rem]">
         <Image
           src={Logo}
           alt="Invoice app logo"

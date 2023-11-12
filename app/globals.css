@@ -4,7 +4,7 @@
 
 @layer base {
   .heading-lg {
-    @apply tracking-tightest text-2xl font-bold leading-none;
+    @apply text-2xl font-bold leading-none tracking-tightest;
   }
 
   .heading-md {
@@ -24,10 +24,10 @@
   }
 
   .text-body-var {
-    @apply font-sm tracking-tight;
+    @apply text-sm tracking-tight;
   }
 
   body {
-    @apply bg-light dark:text-light text-dark text-body min-h-screen dark:bg-blue-900;
+    @apply text-body min-h-screen bg-light text-dark dark:bg-blue-900 dark:text-white;
   }
 }

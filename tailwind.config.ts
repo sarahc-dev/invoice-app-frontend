@@ -56,9 +56,11 @@ const config: Config = {
         base: "45.625rem", // 730px
       },
       spacing: {
+        13: "3.25rem", // 52px
         15: "3.75rem", // 60px
         18: "4.5rem", // 72px
         25: "6.4375rem", // 103px
+        26: "6.5rem", // 104px
       },
     },
   },

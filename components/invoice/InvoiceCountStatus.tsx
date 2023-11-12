@@ -7,7 +7,7 @@ export default function InvoiceCountStatus({
   count: number;
   filter: InvoiceStatusFilter;
 }) {
-  if (count === 0 && filter === "None") {
+  if (count === 0 && filter === "none") {
     return (
       <p className="leading-none text-blue-600 dark:text-blue-500">
         No invoices
@@ -16,7 +16,7 @@ export default function InvoiceCountStatus({
   }
 
   if (count === 1) {
-    if (filter === "None") {
+    if (filter === "none") {
       return (
         <p className="leading-none text-blue-600 dark:text-blue-500">
           <span className="max-md:sr-only">There is </span>
@@ -28,12 +28,12 @@ export default function InvoiceCountStatus({
       return (
         <p className="leading-none text-blue-600 dark:text-blue-500">
           <span className="max-md:sr-only">There is </span>
-          {count} {filter.toLowerCase()} invoice
+          {count} {filter} invoice
         </p>
       );
     }
   } else {
-    if (filter === "None") {
+    if (filter === "none") {
       return (
         <p className="leading-none text-blue-600 dark:text-blue-500">
           <span className="max-md:sr-only">There are </span>
@@ -45,23 +45,9 @@ export default function InvoiceCountStatus({
       return (
         <p className="leading-none text-blue-600 dark:text-blue-500">
           <span className="max-md:sr-only">There are </span>
-          {count} {filter.toLowerCase()} invoices
+          {count} {filter} invoices
         </p>
       );
     }
   }
-
-  // filter, count
-  // filter - "none", "draft", "pending", "paid"
-
-  // Mobile
-  // 7 invoices
-  // No invoices
-  // Filtered?
-
-  // There are 7 total invoices
-  // There are 4 pending invoices
-  // There are 3 paid invoices
-  // There are 2 draft invoices
-  // There are 0 pending invoices
 }
